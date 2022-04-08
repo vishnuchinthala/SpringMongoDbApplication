@@ -30,7 +30,7 @@ import com.example.MongoDB.SpringMongoDBApplication.serviceimpl.PushNotification
 
 @RestController
 public class ProductController {
-	private static final Logger Logger=LoggerFactory.getLogger(ProductController.class);
+// 	private static final Logger Logger=LoggerFactory.getLogger(ProductController.class);
     @Autowired
     private ProductService productService;
     
@@ -38,14 +38,14 @@ public class ProductController {
     
     @GetMapping("/products")
     public ResponseEntity < List < Product >> getAllProduct() {
-    	Logger.info("method executed");
+    	system.out.println("method executed");
         return ResponseEntity.ok().body(productService.getAllProduct());
         
     }
 
     @GetMapping(value="Paganition")
     public ResponseEntity<Page<Product>>getProduct(Paganition paganition){
-    	Logger.info("method executed and output should be display");
+    system.out.println("method executed and output should be display");
   	  return new ResponseEntity<>(productService.getProduct(paganition),HttpStatus.OK);
     }
     @GetMapping("/products/{id}")
