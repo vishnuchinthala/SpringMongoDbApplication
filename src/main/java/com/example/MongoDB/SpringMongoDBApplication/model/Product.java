@@ -48,7 +48,6 @@ public class Product {
 	public void setEmployeeinfo(List<EmployeeInfo> employeeinfo) {
 		this.employeeinfo = employeeinfo;
 	}
-
     public long getId() {
         return id;
     }
@@ -67,4 +66,5 @@ public class Product {
     public void setDescription(String description) {
         this.description = description;
     }
+}
 }
